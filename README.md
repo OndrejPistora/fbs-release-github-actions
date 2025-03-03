@@ -348,3 +348,11 @@ MIT, see [license file](LICENSE).
 - [@Kastakin](https://github.com/Kastakin) for pointing out 
   that the oldest available Linux version should be used
   (Issue [#2](https://github.com/trappitsch/fbs-release-github-actions/issues/2))
+
+## How to release new version
+
+```sh
+bump2version patch
+bump2version minor
+bump2version major
+```
