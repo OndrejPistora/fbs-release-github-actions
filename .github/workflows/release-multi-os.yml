@@ -9,7 +9,7 @@ name: Release Multi Platform
 
 jobs:
   build-linux:
-    name: Create Release and Upload Asset Ubuntu
+    name: Ubuntu - Create Release and Upload Asset 
     runs-on: ubuntu-20.04
     strategy:
       matrix:
@@ -60,11 +60,11 @@ jobs:
           overwrite: true
 
   build-macos:
-    name: Upload Release Asset macOS
-    runs-on: macos-latest
+    name: macOS - Upload Release Asset 
+    runs-on: macos-13
     strategy:
       matrix:
-        python-version: [3.8.12]
+        python-version: [3.13.2]
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -92,7 +92,7 @@ jobs:
           overwrite: true
 
   build-windows:
-    name: Upload Release Asset Windows
+    name: Windows - Upload Release Asset 
     runs-on: windows-latest
     strategy:
       matrix:
